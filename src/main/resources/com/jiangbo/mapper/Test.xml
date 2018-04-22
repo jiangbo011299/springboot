@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.jiangbo.mapper.TestMapper">
+    <select id="getTestById" resultType="com.jiangbo.entity.Test">
+        SELECT *  FROM  test WHERE id = #{id}
+    </select>
+
+    <insert id="addTest">
+        insert into test(name,age,phone) values (#{name}, #{age}, #{phone})
+    </insert>
+</mapper>
